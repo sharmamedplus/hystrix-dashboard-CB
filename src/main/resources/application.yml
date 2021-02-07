@@ -1,0 +1,26 @@
+server:
+  port: 2024
+  
+spring:
+  application:
+    name: HYSTRIX-DASHBOARD
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/sharmamedplus/config-server
+          clone-on-start: true
+   
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: "*"
+    
+    
+#eureka:
+#  client:
+#    register-with-eureka: true
+#    fetch-registry: true
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka/
+#  instance:
+#    hostname: localhost    
